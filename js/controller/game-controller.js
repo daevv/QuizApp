@@ -43,6 +43,9 @@ export default class GameController {
       this.reset();
       return;
     }
+    if (this.currentQuestion === 0) {
+      return;
+    }
     this.#container.insertAdjacentElement('beforeend', this.createQuestionCard());
   }
 
