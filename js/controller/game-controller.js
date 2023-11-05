@@ -41,6 +41,7 @@ export default class GameController {
   startGame = () => {
     if (this.isFinished) {
       this.reset();
+      return;
     }
     this.#container.insertAdjacentElement('beforeend', this.createQuestionCard());
   }
