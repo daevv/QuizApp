@@ -43,10 +43,7 @@ export default class GameController {
       this.reset();
       return;
     }
-    if (this.currentQuestion === 0) {
-      return;
-    }
-    this.#container.insertAdjacentElement('beforeend', this.createQuestionCard());
+    if (!this.#container.firstElementChild) this.#container.insertAdjacentElement('beforeend', this.createQuestionCard());
   }
 
   endGame = () => {
@@ -66,6 +63,8 @@ export default class GameController {
 
   handleAnswer = (correctAnswerId, evt) => {
     evt.preventDefault();
+    const checkedAnswer = evt.target.querySelector('[name="answer"]:checked');
+    if (!checkedAnswer) return;
     const chosenAnswerId = evt.target.querySelector('[name="answer"]:checked').id;
     if (correctAnswerId === chosenAnswerId) {
       this.numberOfCorrectAnswers += 1;
