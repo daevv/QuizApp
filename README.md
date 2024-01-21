@@ -2,7 +2,7 @@
 <img src='./assets/app-demo.png' alt='app-pic'>
 
 ### Description
-<p>Simple pet-prpject in OOP style.</p>
+<p>Simple pet-project in OOP style.</p>
 <p>Try to play quiz with 5 simple question and get your result at the end.</p>
 <a href="https://daevv.github.io/QuizApp/" target="_blank">Play now!</a>
 
